@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LetterRain</string>
+    <string name="start_menu_title">Letter Rain</string>
+    <string name="score_placeholder">46</string>
+    <string name="time_placeholder">00:12</string>
+    <string name="text_placeholder">SLAM</string>
+</resources>
