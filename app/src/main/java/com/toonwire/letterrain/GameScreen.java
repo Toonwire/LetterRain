@@ -1,9 +1,9 @@
 package com.toonwire.letterrain;
 
 import android.graphics.PorterDuff;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.EditText;
 
 public class GameScreen extends AppCompatActivity {
@@ -16,5 +16,10 @@ public class GameScreen extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editText);
         // change line color by the reference to the color resource
         editText.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }
