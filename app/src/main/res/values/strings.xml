@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">LetterRain</string>
     <string name="start_menu_title">Letter Rain</string>
-    <string name="score_placeholder">46</string>
-    <string name="time_placeholder">00:12</string>
-    <string name="text_placeholder">SLAM</string>
+    <string name="score_placeholder">0</string>
+    <string name="time_placeholder">00:00</string>
+    <string name="play_button_text">Play</string>
+    <string name="word_score">Word Score:</string>
+    <string name="multiplier">Multiplier:</string>
+    <string name="your_total">Your total:</string>
+    <string name="multiplier_placeholder">x1</string>
 </resources>

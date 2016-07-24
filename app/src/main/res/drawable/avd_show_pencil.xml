@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pencil">
+
+    <target
+        android:name="fingerprint"
+        android:animation="@animator/pencil_appear" />
+
+    <target
+        android:name="base_top"
+        android:animation="@animator/pencil_show_stroke" />
+
+    <target
+        android:name="base_bottom"
+        android:animation="@animator/pencil_show_stroke" />
+
+    <target
+        android:name="base_end"
+        android:animation="@animator/pencil_show_stroke" />
+
+    <target
+        android:name="base_head"
+        android:animation="@animator/pencil_show_stroke" />
+
+    <target
+        android:name="eraser"
+        android:animation="@animator/pencil_show_stroke" />
+
+</animated-vector>

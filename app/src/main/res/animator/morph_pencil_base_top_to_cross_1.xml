@@ -1,0 +1,26 @@
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+
+    <objectAnimator
+        android:duration="@integer/duration_morph"
+        android:propertyName="pathData"
+        android:valueFrom="@string/path_base_top"
+        android:valueTo="@string/path_cross_1"
+        android:valueType="pathType" />
+
+    <objectAnimator
+        android:duration="@integer/duration_morph"
+        android:propertyName="strokeColor"
+        android:valueFrom="@color/pencil_stroke"
+        android:valueTo="@color/tick_cross_stroke"
+        android:interpolator="@android:interpolator/linear" />
+
+    <objectAnimator
+        android:duration="@integer/duration_morph"
+        android:propertyName="strokeWidth"
+        android:valueFrom="@integer/pencil_stroke_width"
+        android:valueTo="@integer/tick_cross_stroke_width"
+        android:valueType="floatType"
+        android:interpolator="@android:interpolator/fast_out_slow_in" />
+</set>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/pencil_width"
+    android:height="@dimen/pencil_height"
+    android:viewportWidth="@integer/pencil_viewport_width"
+    android:viewportHeight="@integer/pencil_viewport_height">
+
+    <group
+        android:name="pencil"
+        android:pivotX="@integer/pencil_viewport_center"
+        android:pivotY="@integer/pencil_viewport_center" >
+
+        <group
+            android:name="base" >
+
+            <group
+                android:name="rotateGroup"
+                android:pivotX="@integer/pencil_viewport_center"
+                android:pivotY="@integer/pencil_viewport_center">
+
+                <path
+                    android:name="base_top"
+                    android:strokeColor="@color/pencil_stroke"
+                    android:strokeWidth="@integer/pencil_stroke_width"
+                    android:pathData="@string/path_base_top" />
+
+                <path
+                    android:name="base_bottom"
+                    android:strokeColor="@color/pencil_stroke"
+                    android:strokeWidth="@integer/pencil_stroke_width"
+                    android:pathData="@string/path_base_bottom" />
+
+            </group>
+
+            <path
+                android:name="base_end"
+                android:strokeColor="@color/pencil_stroke"
+                android:strokeWidth="@integer/pencil_stroke_width"
+                android:pathData="@string/path_base_end" />
+
+            <path
+                android:name="base_head"
+                android:strokeColor="@color/pencil_stroke"
+                android:strokeWidth="@integer/pencil_stroke_width"
+                android:pathData="@string/path_base_head" />
+
+        </group>
+
+
+        <path
+            android:name="eraser"
+            android:strokeColor="@color/pencil_stroke"
+            android:strokeWidth="@integer/pencil_stroke_width"
+            android:pathData="@string/path_eraser" />
+
+    </group>
+</vector>

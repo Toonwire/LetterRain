@@ -15,12 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".StartMenuActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameScreen"></activity>
+
+        <activity android:name=".GameScreenActivity"> </activity>
+
     </application>
 
 </manifest>

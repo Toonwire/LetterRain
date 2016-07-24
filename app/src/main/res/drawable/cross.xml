@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/tick_cross_width"
+    android:height="@dimen/tick_cross_height"
+    android:viewportWidth="@integer/tick_cross_viewport_width"
+    android:viewportHeight="@integer/tick_cross_viewport_height">
+
+    <group
+        android:name="rotationGroup_check"
+        android:pivotX="@integer/tick_cross_viewport_center"
+        android:pivotY="@integer/tick_cross_viewport_center">
+
+        <path
+            android:name="cross_1"
+            android:strokeColor="@color/tick_cross_stroke"
+            android:strokeWidth="@integer/tick_cross_stroke_width"
+            android:pathData="@string/path_cross_1"/>
+        <path
+            android:name="cross_2"
+            android:strokeColor="@color/tick_cross_stroke"
+            android:strokeWidth="@integer/tick_cross_stroke_width"
+            android:pathData="@string/path_cross_2" />
+
+    </group>
+</vector>

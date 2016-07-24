@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pencil">
+
+    <target
+        android:name="eraser"
+        android:animation="@animator/pencil_hide_stroke" />
+
+    <target
+        android:name="base_head"
+        android:animation="@animator/pencil_hide_stroke" />
+
+    <target
+        android:name="base_end"
+        android:animation="@animator/pencil_hide_stroke" />
+
+    <target
+        android:name="eraser"
+        android:animation="@animator/pencil_hide_stroke" />
+
+    <target
+        android:name="base_top"
+        android:animation="@animator/morph_pencil_base_top_to_cross_1" />
+
+    <target
+        android:name="base_bottom"
+        android:animation="@animator/morph_pencil_base_bottom_to_cross_2" />
+
+    <target
+        android:name="rotateGroup"
+        android:animation="@animator/rotate_pencil_to_tick_cross" />
+
+</animated-vector>

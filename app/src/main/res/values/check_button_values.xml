@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!--Dimensions-->
+    <dimen name="pencil_width">32dp</dimen>
+    <dimen name="pencil_height">32dp</dimen>
+    <integer name="pencil_viewport_width">24</integer>
+    <integer name="pencil_viewport_height">24</integer>
+    <integer name="pencil_viewport_center">12</integer>
+    <integer name="pencil_stroke_width">1</integer>
+
+    <dimen name="tick_cross_width">32dp</dimen>
+    <dimen name="tick_cross_height">32dp</dimen>
+    <integer name="tick_cross_viewport_width">24</integer>
+    <integer name="tick_cross_viewport_height">24</integer>
+    <integer name="tick_cross_viewport_center">12</integer>
+    <integer name="tick_cross_stroke_width">2</integer>
+
+    <dimen name="circle_width">48dp</dimen>
+    <dimen name="circle_height">48dp</dimen>
+
+    <!--PathData-->
+    <string name="path_base_top">M3 17.25 L14.08 6.24</string>
+    <string name="path_base_bottom">M6.75 21 L17.81 9.94</string>
+    <string name="path_base_end">M17.84 10.6 l-4.41 -4.41</string>
+    <string name="path_base_head">M3.15 16.93 V20.9 h3.95</string>
+    <string name="path_eraser">M17 3.24 l-1.83 1.83 l3.75 3.75 l1.83-1.83 z</string>
+
+    <string name="path_cross_1">M6.4 6.4 L17.6 17.6</string>
+    <string name="path_cross_2">M6.4 17.6 L17.6 6.4</string>
+
+    <string name="path_tick_1">M4.8 13.4 L9 17.6</string>
+    <string name="path_tick_2">M8 18 L19.6 7</string>
+
+    <!--<string name="path_base_top">M6 34.5 L28.16 12.48</string>-->
+    <!--<string name="path_base_bottom">M13.5 42 L35.62 19.88</string>-->
+    <!--<string name="path_base_end">M35.68 21.2 l-8.82 -8.82</string>-->
+    <!--<string name="path_base_head">M6.3 33.86 V41.8 h7.9</string>-->
+    <!--<string name="path_eraser">M34 6.48 l-3.66 3.66 27.5 7.5 l3.66-3.66 z</string>-->
+
+    <!--<string name="path_cross_1">M6.4 6.4 L17.6 17.6</string>-->
+    <!--<string name="path_cross_2">M6.4 17.6 L17.6 6.4</string>-->
+
+    <!--<string name="path_tick_1">M4.8 13.4 L9 17.6</string>-->
+    <!--<string name="path_tick_2">M8 18 L19.6 7</string>-->
+
+    <!-- a 'window' which is 1/4 of the height of the viewport that we use as a clip during the 'scan'
+         operation by animating it from the top to the bottom and back. -->
+    <string name="clip_path_check_top">M0 0 L160 0 L160 40 L0 40 Z</string>
+    <string name="clip_path_check_bottom">M0 120 L160 120 L160 160 L0 160 Z</string>
+
+    <!--Colors-->
+    <color name="pencil_stroke">#18ffff</color>
+    <color name="pencil_stroke_highlight">#bbffff</color>
+    <color name="tick_cross_stroke">#ffffff</color>
+    <color name="circle_default">#0097a7</color>
+    <color name="circle_success">#00e676</color>
+    <color name="circle_error">#FF4100</color>
+
+    <!--Animation Durations-->
+
+    <integer name="duration_pencil_appear">500</integer>
+    <integer name="duration_pencil_stroke_hide">200</integer>
+    <integer name="duration_pencil_stroke_show">500</integer>
+    <integer name="duration_morph">400</integer>
+    <integer name="duration_rotate">400</integer>
+</resources>
