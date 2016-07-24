@@ -35,7 +35,7 @@ public class ActionSurfaceView extends SurfaceView implements SurfaceHolder.Call
     public ActionSurfaceView(Context context) {
         super(context);
 
-        // load the letters A-Z
+        // load the letters a-z
         char[] letters = new char[26];
         for (int i = 0; i < 26; i++) {
             char c = (char) ('a' + i);
@@ -193,20 +193,22 @@ public class ActionSurfaceView extends SurfaceView implements SurfaceHolder.Call
                             long millisRemaining = mActivity.getCountdownTimer().getRemainingMillis();
                             long stopTimeInFuture = mActivity.getCountdownTimer().getStopTimeInFuture();
 
-                            if (millisRemaining <= 5000 && millisRemaining != 0) {
-                                // reduce game time left to 0
-                                long newMillisRemaining = 0;
-                                long newStopTimeInFuture = stopTimeInFuture - millisRemaining;
-                                mActivity.getCountdownTimer().setRemainingMillis(newStopTimeInFuture);
-                                mActivity.getTimeView().setText(mActivity.formatTime(newMillisRemaining));
-                            }
+                            if (millisRemaining != 0) {
+                                if (millisRemaining <= 5000) {
+                                    // reduce game time left to 0
+                                    long newMillisRemaining = 0;
+                                    long newStopTimeInFuture = stopTimeInFuture - millisRemaining;
+                                    mActivity.getCountdownTimer().setRemainingMillis(newStopTimeInFuture);
+                                    mActivity.getTimeView().setText(mActivity.formatTime(newMillisRemaining));
+                                }
 
-                            else {
-                                // reduce game time left by 5 seconds
-                                long newMillisRemaining = millisRemaining - 5000;
-                                long newStopTimeInFuture = stopTimeInFuture - 5000;
-                                mActivity.getCountdownTimer().setRemainingMillis(newStopTimeInFuture);
-                                mActivity.getTimeView().setText(mActivity.formatTime(newMillisRemaining));
+                                else {
+                                    // reduce game time left by 5 seconds
+                                    long newMillisRemaining = millisRemaining - 5000;
+                                    long newStopTimeInFuture = stopTimeInFuture - 5000;
+                                    mActivity.getCountdownTimer().setRemainingMillis(newStopTimeInFuture);
+                                    mActivity.getTimeView().setText(mActivity.formatTime(newMillisRemaining));
+                                }
                             }
                         }
                     });

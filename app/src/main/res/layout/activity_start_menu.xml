@@ -13,24 +13,43 @@
         android:textSize="48sp"
         android:gravity="center"/>
 
-    <!--score panel is layered ontop of the playbutton
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_button_text"
+        android:id="@+id/play_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp" />
+
+
+    <!--score panel is layered "ontop" of the playbutton
     but room will be made for it during showcasing
     this view is initially invisible -->
+
+    <!-- Current score view -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/score_layout"
-        android:layout_alignBottom="@+id/play_button"
-        android:layout_centerHorizontal="true" >
+        android:layout_alignTop="@+id/play_button"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/word_count"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/word_score"/>
 
             <TextView
@@ -57,12 +76,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="end">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:text="9"
+                android:id="@+id/tvWordCount"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 android:text="86"
                 android:id="@+id/tvWordScore"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,7 +99,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
                 android:text="x7"
-                android:id="@+id/tvMultilpier"/>
+                android:id="@+id/tvMultiplier"/>
 
             <View
                 android:background="#000000"
@@ -86,18 +115,6 @@
                 android:text="602"
                 android:id="@+id/tvScoreTotal"/>
         </LinearLayout>
-
     </LinearLayout>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/play_button_text"
-        android:id="@+id/play_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp" />
-
 
 </RelativeLayout>

@@ -4,8 +4,9 @@
     <string name="score_placeholder">0</string>
     <string name="time_placeholder">00:00</string>
     <string name="play_button_text">Play</string>
-    <string name="word_score">Word Score:</string>
-    <string name="multiplier">Multiplier:</string>
-    <string name="your_total">Your total:</string>
+    <string name="word_count">#Words</string>
+    <string name="word_score">Word scores</string>
+    <string name="multiplier">Longest word</string>
+    <string name="your_total">Your total</string>
     <string name="multiplier_placeholder">x1</string>
 </resources>

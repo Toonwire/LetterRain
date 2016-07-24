@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,9 +17,9 @@ import android.widget.TextView;
 public class StartMenuActivity extends Activity {
 
     static final int SCORE_REQUEST_CODE = 0;
-    private int score, multiplier;
+    private int wordScore, wordCount, multiplier;
 
-    private TextView tvWordScore, tvMultiplier, tvScoreTotal;
+    private TextView tvWordScore, tvWordCount, tvMultiplier, tvScoreTotal;
     private LinearLayout scoreLayout;
     private Button playButton;
 
@@ -29,7 +29,8 @@ public class StartMenuActivity extends Activity {
         setContentView(R.layout.activity_start_menu);
 
         tvWordScore = (TextView) findViewById(R.id.tvWordScore);
-        tvMultiplier = (TextView) findViewById(R.id.tvMultilpier);
+        tvWordCount = (TextView) findViewById(R.id.tvWordCount);
+        tvMultiplier = (TextView) findViewById(R.id.tvMultiplier);
         tvScoreTotal = (TextView) findViewById(R.id.tvScoreTotal);
 
         scoreLayout = (LinearLayout) findViewById(R.id.score_layout);
@@ -59,14 +60,16 @@ public class StartMenuActivity extends Activity {
         scoreLayout.setVisibility(View.INVISIBLE);
         if (requestCode == SCORE_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                score = data.getIntExtra("score" , 0);
+                wordScore = data.getIntExtra("score" , 0);
+                wordCount = data.getIntExtra("count", 0);
                 multiplier = data.getIntExtra("multiplier", 0);
 
                 makeRoomAndShowScoreLayout();
                 // count and display final score
-                tvWordScore.setText(String.valueOf(score));
+                tvWordScore.setText(String.valueOf(wordScore));
                 tvMultiplier.setText(String.format("x%s", String.valueOf(multiplier)));
-                int totalScore = score*multiplier;
+                tvWordCount.setText(String.valueOf(wordCount));
+                int totalScore = (wordScore + wordCount)*multiplier;
 
                 // animate counting the final score
                 ValueAnimator animator = new ValueAnimator();
@@ -92,7 +95,7 @@ public class StartMenuActivity extends Activity {
             .translationY(scoreLayout.getHeight())
             .setDuration(1000)
             .setStartDelay(500)
-            .setInterpolator(new AccelerateDecelerateInterpolator())
+            .setInterpolator(new DecelerateInterpolator())
             .setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
