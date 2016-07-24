@@ -7,7 +7,6 @@ import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
@@ -22,6 +21,7 @@ public class StartMenuActivity extends Activity {
     private TextView tvWordScore, tvWordCount, tvMultiplier, tvScoreTotal;
     private LinearLayout scoreLayout;
     private Button playButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +86,8 @@ public class StartMenuActivity extends Activity {
                 });
                 animator.setDuration(2000);
                 animator.start();
+
+
             }
         }
     }

@@ -5,7 +5,7 @@
 
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -116,5 +116,131 @@
                 android:id="@+id/tvScoreTotal"/>
         </LinearLayout>
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_highscore_title"
+        android:textSize="24sp"
+        android:text="Highscores"
+        android:layout_above="@+id/highscore_layout"
+        android:layout_marginBottom="5dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- highscore view -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/highscore_layout"
+        android:orientation="horizontal"
+        android:layout_above="@+id/tv_title"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="95dp">
+
+        <!-- 1., 2., 3. placement-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="3."/>
+
+        </LinearLayout>
+
+        <!-- signature of highscore holder - max length = 4 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="LUVI"
+                android:id="@+id/editFirstPlace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="SEBN"
+                android:id="@+id/editSecondPlace"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="TIFA"
+                android:id="@+id/editThirdPlace"/>
+
+        </LinearLayout>
+
+
+        <!-- actual highscore-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="300"
+                android:id="@+id/tvFirstPlaceScore"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:text="200"
+                android:id="@+id/tvSecondPlaceScore"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:text="100"
+                android:id="@+id/tvThirdPlaceScore"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </RelativeLayout>
